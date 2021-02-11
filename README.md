@@ -15,4 +15,4 @@ Latest version of helm may be found at
 
 Latest version of gcloud may be found at
 
-https://cloud.google.com/sdk/docs/
+- https://cloud.google.com/sdk/docs/
