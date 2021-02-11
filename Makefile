@@ -1,6 +1,6 @@
 default: docker_build
 
-DOCKER_IMAGE ?= frestyle/helm-kubectl
+DOCKER_IMAGE ?= frestyle/helm-kubectl-doctl
 DOCKER_TAG ?= `git rev-parse --abbrev-ref HEAD`
 
 docker_build:

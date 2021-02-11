@@ -1,7 +1,7 @@
 sudo: required
 
 env:
-  DOCKER_IMAGE=frestyle/helm-kubectl
+  DOCKER_IMAGE=frestyle/helm-kubectl-doctl
   DOCKER_TAG=3.3.4
 
 services:
