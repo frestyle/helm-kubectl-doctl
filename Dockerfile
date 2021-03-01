@@ -17,11 +17,16 @@ ENV KUBE_LATEST_VERSION="v1.20.2"
 # https://github.com/kubernetes/helm/releases
 ENV HELM_VERSION="v3.5.0"
 
+# https://github.com/wagoodman/dive/releases
+ENV DIVE_VERSION="0.9.2"
+
 RUN apk add --no-cache ca-certificates bash git openssh curl \
     && wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl \
     && wget -q https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm \
     && chmod +x /usr/local/bin/helm \
+    && wget -q https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.tar.gz -O - | tar -xzO dive > /usr/local/bin/dive \
+    && chmod +x /usr/local/bin/dive \
     && chmod g+rwx /root \
     && mkdir /config \
     && chmod g+rwx /config    
