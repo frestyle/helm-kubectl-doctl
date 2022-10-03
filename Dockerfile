@@ -15,7 +15,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 ENV KUBE_LATEST_VERSION="v1.20.2"
 # Note: Latest version of helm may be found at
 # https://github.com/kubernetes/helm/releases
-ENV HELM_VERSION="v3.5.0"
+ENV HELM_VERSION="v3.10.0"
 
 # https://github.com/wagoodman/dive/releases
 ENV DIVE_VERSION="0.9.2"
